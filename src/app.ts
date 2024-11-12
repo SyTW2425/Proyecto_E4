@@ -3,6 +3,7 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 
 import userRoutes from './routes/userRoutes';
+import listRoutes from './routes/listRoutes';
 
 dotenv.config();
 
@@ -16,6 +17,7 @@ mongoose.connect(process.env.MONGODB_URI as string)
 
 // Configuración de rutas sin prefijo '/api'
 app.use(userRoutes);
+app.use(listRoutes);
 
 
 // Inicia el servidor en el puerto 3000
