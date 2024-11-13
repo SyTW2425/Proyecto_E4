@@ -1,7 +1,7 @@
 import { Document, Schema, model } from "mongoose";
 
 export interface PurchaseDocumentInterface extends Document {
-  user: string;  // ISBN será el ID
+  user: string;
   total_price: number;
   date: string;
 }
