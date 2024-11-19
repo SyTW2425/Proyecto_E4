@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio</title>
+  <link href="dist/styles.css" rel="stylesheet">  
+
+</head>
+<body class="bg-emerald-50 font-sans">
+  <!-- BARRA SUPERIOR -->
+  <div class="bg-emerald-600 text-white py-4 px-6 flex justify-between items-center fixed top-0 left-0 w-full shadow-md z-50">
+    <div class="flex items-center space-x-4">
+      <img src="img/logo.png" alt="Logo" class="h-10 w-10 rounded-full">
+      <span class="text-xl font-semibold">Mi Web</span>
+    </div>
+
+    <!-- BARRA DE BÚSQUEDA -->
+    <div class="flex items-center bg-white text-black rounded-full px-4 py-2 w-1/3">
+      <input type="text" placeholder="Buscar..." class="flex-grow bg-transparent outline-none px-2">
+      <button class="text-emerald-600 hover:text-emerald-800">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zm-7 4a7 7 0 1114 0 7 7 0 01-14 0zm14.707 6.293a1 1 0 00-1.414 0l-2.83 2.829a1 1 0 001.415 1.415l2.83-2.829a1 1 0 000-1.415z" clip-rule="evenodd" />
+        </svg>
+      </button>
+    </div>    
+    
+    <nav>
+      <ul class="flex space-x-6">
+        <li><a href="#" class="hover:text-gray-400">Inicio</a></li>
+        <li><a href="#" class="hover:text-gray-400">Servicios</a></li>
+        <li><a href="#" class="hover:text-gray-400">Contacto</a></li>
+      </ul>
+    </nav>
+  </div>
+  
+  <!-- BARRA IZQUIERDA -->
+  <div class="bg-emerald-600 w-64 h-screen fixed top-0 left-0 text-white flex flex-col justify-between">
+
+    <!-- Contenido superior -->
+    <div class="mt-8 p-16">
+      <h2 class="text-lg font-bold underline">Categorías</h2>
+      <ul class="mt-4 space-y-2">
+        <li><a href="#" class="hover:text-gray-400">Categoría 1</a></li>
+        <li><a href="#" class="hover:text-gray-400">Categoría 2</a></li>
+        <li><a href="#" class="hover:text-gray-400">Categoría 3</a></li>
+        <li><a href="#" class="hover:text-gray-400">Categoría 4</a></li>
+        <li><a href="#" class="hover:text-gray-400">Categoría 5</a></li>
+        <li><a href="#" class="hover:text-gray-400">Categoría 6</a></li>
+        <li><a href="#" class="hover:text-gray-400">Categoría 7</a></li>
+      </ul>
+    </div>
+
+    <!-- Contenido inferior -->
+    <div class="p-4 flex justify-center">
+      <p class="text-sm">© 2024 Mi Web</p>
+    </div>
+  </div>
+
+  <!-- PANTALLA CENTRAL -->
+  <div class="ml-64 mt-32 px-8 flex flex-col items-center">
+    <h1 class="text-4xl font-bold text-gray-800 mb-8 underline">Novedades</h1>
+
+    <div class="flex justify-center space-x-32 w-full mt-2">
+    
+      <!-- Carrusel de la izquierda-->
+      <div class="relative w-[230px] h-[360px] overflow-hidden">
+        <img src="img/books/book_1.jpg" alt="Libro 1" class="book-shape absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-100 active">
+        <img src="img/books/book_2.jpg" alt="Libro 2" class="book-shape absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-100 active">    
+        <img src="img/books/book_3.jpg" alt="Libro 3" class="book-shape absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-100 active">    
+      </div>
+
+      <!-- Carrusel del centro -->
+      <div class="relative w-[230px] h-[360px] overflow-hidden">
+        <img src="img/books/book_4.webp" alt="Libro 4" class="book-shape absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-100 active">
+        <img src="img/books/book_5.jpg" alt="Libro 5" class="book-shape absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-100 active">
+        <img src="img/books/book_6.webp" alt="Libro 6" class="book-shape absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-100 active">
+      </div>
+
+      <!-- Carrusel de la derecha -->
+      <div class="relative w-[230px] h-[360px] overflow-hidden">
+        <img src="img/books/book_7.avif" alt="Libro 7" class="book-shape absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-100 active">
+        <img src="img/books/book_8.avif" alt="Libro 8" class="book-shape absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-100 active">
+        <img src="img/books/book_9.avif" alt="Libro 9" class="book-shape absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-100 active">    
+      </div>
+    </div>    
+  </div>   
+
+
+
+  <!-- Script del carrusel -->
+  <script>
+    // Selecciona todos los carruseles
+    const carruseles = document.querySelectorAll('.relative');
+  
+    // Aplica la lógica de rotación a cada carrusel de forma independiente
+    carruseles.forEach(carrusel => {
+      const images = carrusel.querySelectorAll('img');
+      let currentIndex = 0;
+  
+      setInterval(() => {
+        // Oculta la imagen actual
+        images[currentIndex].classList.remove('opacity-100');
+        images[currentIndex].classList.add('opacity-0');
+  
+        // Cambia al siguiente índice (con vuelta al inicio)
+        currentIndex = (currentIndex + 1) % images.length;
+  
+        // Muestra la nueva imagen actual
+        images[currentIndex].classList.remove('opacity-0');
+        images[currentIndex].classList.add('opacity-100');
+      }, 3000); // Cambia cada 3 segundos
+    });
+  </script>
+
+</body>
+</html>
