@@ -28,7 +28,7 @@
     <nav>
       <ul class="flex space-x-6">
         <li><a href="#" class="hover:text-gray-400">Inicio</a></li>
-        <li><a href="#" class="hover:text-gray-400">Servicios</a></li>
+        <li><a href="sign_in.html" class="hover:text-gray-400">Login</a></li>
         <li><a href="#" class="hover:text-gray-400">Contacto</a></li>
       </ul>
     </nav>
@@ -41,13 +41,13 @@
     <div class="mt-8 p-16">
       <h2 class="text-lg font-bold underline">Categorías</h2>
       <ul class="mt-4 space-y-2">
-        <li><a href="#" class="hover:text-gray-400">Categoría 1</a></li>
-        <li><a href="#" class="hover:text-gray-400">Categoría 2</a></li>
-        <li><a href="#" class="hover:text-gray-400">Categoría 3</a></li>
-        <li><a href="#" class="hover:text-gray-400">Categoría 4</a></li>
-        <li><a href="#" class="hover:text-gray-400">Categoría 5</a></li>
-        <li><a href="#" class="hover:text-gray-400">Categoría 6</a></li>
-        <li><a href="#" class="hover:text-gray-400">Categoría 7</a></li>
+        <li><a href="#" class="hover:text-gray-400">Libros de autoayuda</a></li>
+        <li><a href="#" class="hover:text-gray-400">Libros infantiles</a></li>
+        <li><a href="#" class="hover:text-gray-400">Fantasía</a></li>
+        <li><a href="#" class="hover:text-gray-400">Historia</a></li>
+        <li><a href="#" class="hover:text-gray-400">Libros prácticos</a></li>
+        <li><a href="#" class="hover:text-gray-400">Literatura</a></li>
+        <li><a href="#" class="hover:text-gray-400">Novedades</a></li>
       </ul>
     </div>
 
@@ -57,36 +57,228 @@
     </div>
   </div>
 
-  <!-- PANTALLA CENTRAL -->
-  <div class="ml-64 mt-32 px-8 flex flex-col items-center">
-    <h1 class="text-4xl font-bold text-gray-800 mb-8 underline">Novedades</h1>
-
-    <div class="flex justify-center space-x-32 w-full mt-2">
+<!-- PANTALLA CENTRAL -->
+<div class="ml-64 mt-32 px-8 flex flex-col items-center">
+  <div class="w-screen flex justify-center">
+    <video class="w-[1200px] h-[150px] rounded-lg" autoplay loop muted>
+      <source src="img/clip_library.mp4" type="video/mp4">
+    </video>
+  </div>  
+      
+  <div class="flex justify-center space-x-32 w-full mt-2">
     
-      <!-- Carrusel de la izquierda-->
-      <div class="relative w-[230px] h-[360px] overflow-hidden">
-        <img src="img/books/book_1.jpg" alt="Libro 1" class="book-shape absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-100 active">
-        <img src="img/books/book_2.jpg" alt="Libro 2" class="book-shape absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-100 active">    
-        <img src="img/books/book_3.jpg" alt="Libro 3" class="book-shape absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-100 active">    
+    <!-- Carrusel -->
+    <div class="flex flex-col items-center space-y-4">
+      <div class="flex items-start space-x-4">
+        <!-- Contenedor con opciones hover y detalles del libro -->
+        <div class="relative group w-[230px] h-[360px]">
+          <!-- Imagen del libro -->
+          <img src="img/books/book_1.jpg" alt="Libro 1" class="w-full h-full object-cover rounded-lg transition-transform duration-300 group-hover:scale-105">
+      
+          <!-- Opciones flotantes al hacer hover -->
+          <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center space-y-2">
+            <!-- Botones con enlaces -->
+            <a href="book.html" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 text-center">Comprar</a>
+            <a href="book.html" class="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600 text-center">Ver reseñas</a>
+            <a href="book.html" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 text-center">Libros similares</a>
+          </div>
+        </div>
+      
+        <!-- Información del libro -->
+        <div class="flex flex-col items-start">
+          <!-- Título como enlace -->
+          <a href="book.html" class="text-xl font-semibold text-blue-800 hover:underline">Título del Libro 1</a>
+          <p class="text-sm text-black">Autor 1</p>
+          <p class="text-sm font-bold text-black">22.00€</p>
+        </div>
       </div>
+       
 
-      <!-- Carrusel del centro -->
-      <div class="relative w-[230px] h-[360px] overflow-hidden">
-        <img src="img/books/book_4.webp" alt="Libro 4" class="book-shape absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-100 active">
-        <img src="img/books/book_5.jpg" alt="Libro 5" class="book-shape absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-100 active">
-        <img src="img/books/book_6.webp" alt="Libro 6" class="book-shape absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-100 active">
-      </div>
+      <div class="flex items-start space-x-4">
+        <!-- Contenedor con opciones hover y detalles del libro -->
+        <div class="relative group w-[230px] h-[360px]">
+          <!-- Imagen del libro -->
+          <img src="img/books/book_2.jpg" alt="Libro 2" class="w-full h-full object-cover rounded-lg transition-transform duration-300 group-hover:scale-105">
+          
+          <!-- Opciones flotantes al hacer hover -->
+          <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center space-y-2">
+            <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Comprar</button>
+            <button class="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600">Ver reseñas</button>
+            <button class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">Libros similares</button>
+          </div>
+        </div>
+        
+        <!-- Información del libro -->
+        <div class="flex flex-col items-start">
+          <h3 class="text-xl font-semibold text-blue-800">Título del Libro 2</h3>
+          <p class="text-sm text-black">Autor 2</p>
+          <p class="text-sm font-bold text-black">22.00€</p>
+        </div>
+      </div>      
+      
+      <div class="flex items-start space-x-4">
+        <!-- Contenedor con opciones hover y detalles del libro -->
+        <div class="relative group w-[230px] h-[360px]">
+          <!-- Imagen del libro -->
+          <img src="img/books/book_3.jpg" alt="Libro 3" class="w-full h-full object-cover rounded-lg transition-transform duration-300 group-hover:scale-105">
+          
+          <!-- Opciones flotantes al hacer hover -->
+          <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center space-y-2">
+            <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Comprar</button>
+            <button class="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600">Ver reseñas</button>
+            <button class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">Libros similares</button>
+          </div>
+        </div>
+        
+        <!-- Información del libro -->
+        <div class="flex flex-col items-start">
+          <h3 class="text-xl font-semibold text-blue-800">Título del Libro 3</h3>
+          <p class="text-sm text-black">Autor 3</p>
+          <p class="text-sm font-bold text-black">19.50€</p>
+        </div>
+      </div> 
+    </div>
 
-      <!-- Carrusel de la derecha -->
-      <div class="relative w-[230px] h-[360px] overflow-hidden">
-        <img src="img/books/book_7.avif" alt="Libro 7" class="book-shape absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-100 active">
-        <img src="img/books/book_8.avif" alt="Libro 8" class="book-shape absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-100 active">
-        <img src="img/books/book_9.avif" alt="Libro 9" class="book-shape absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-100 active">    
-      </div>
-    </div>    
-  </div>   
+    <!-- Carrusel del centro -->
+    <div class="flex flex-col items-center space-y-4">
+      <div class="flex items-start space-x-4">
+        <!-- Contenedor con opciones hover y detalles del libro -->
+        <div class="relative group w-[230px] h-[360px]">
+          <!-- Imagen del libro -->
+          <img src="img/books/book_4.webp" alt="Libro 4" class="w-full h-full object-cover rounded-lg transition-transform duration-300 group-hover:scale-105">
+          
+          <!-- Opciones flotantes al hacer hover -->
+          <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center space-y-2">
+            <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Comprar</button>
+            <button class="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600">Ver reseñas</button>
+            <button class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">Libros similares</button>
+          </div>
+        </div>
+        
+        <!-- Información del libro -->
+        <div class="flex flex-col items-start">
+          <h3 class="text-xl font-semibold text-blue-800">Título del Libro 4</h3>
+          <p class="text-sm text-black">Autor 4</p>
+          <p class="text-sm font-bold text-black">23.20€</p>
+        </div>
+      </div> 
+      
+      <div class="flex items-start space-x-4">
+        <!-- Contenedor con opciones hover y detalles del libro -->
+        <div class="relative group w-[230px] h-[360px]">
+          <!-- Imagen del libro -->
+          <img src="img/books/book_5.jpg" alt="Libro 5" class="w-full h-full object-cover rounded-lg transition-transform duration-300 group-hover:scale-105">
+          
+          <!-- Opciones flotantes al hacer hover -->
+          <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center space-y-2">
+            <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Comprar</button>
+            <button class="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600">Ver reseñas</button>
+            <button class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">Libros similares</button>
+          </div>
+        </div>
+        
+        <!-- Información del libro -->
+        <div class="flex flex-col items-start">
+          <h3 class="text-xl font-semibold text-blue-800">Título del Libro 5</h3>
+          <p class="text-sm text-black">Autor 5</p>
+          <p class="text-sm font-bold text-black">17.90€</p>
+        </div>
+      </div> 
+      
+      <div class="flex items-start space-x-4">
+        <!-- Contenedor con opciones hover y detalles del libro -->
+        <div class="relative group w-[230px] h-[360px]">
+          <!-- Imagen del libro -->
+          <img src="img/books/book_6.webp" alt="Libro 6" class="w-full h-full object-cover rounded-lg transition-transform duration-300 group-hover:scale-105">
+          
+          <!-- Opciones flotantes al hacer hover -->
+          <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center space-y-2">
+            <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Comprar</button>
+            <button class="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600">Ver reseñas</button>
+            <button class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">Libros similares</button>
+          </div>
+        </div>
+        
+        <!-- Información del libro -->
+        <div class="flex flex-col items-start">
+          <h3 class="text-xl font-semibold text-blue-800">Título del Libro 6</h3>
+          <p class="text-sm text-black">Autor 6</p>
+          <p class="text-sm font-bold text-black">14.20€</p>
+        </div>
+      </div> 
+    </div>
 
+    <!-- Carrusel de la derecha -->
+    <div class="flex flex-col items-center space-y-4">
+      <div class="flex items-start space-x-4">
+        <!-- Contenedor con opciones hover y detalles del libro -->
+        <div class="relative group w-[230px] h-[360px]">
+          <!-- Imagen del libro -->
+          <img src="img/books/book_7.avif" alt="Libro 7" class="w-full h-full object-cover rounded-lg transition-transform duration-300 group-hover:scale-105">
+          
+          <!-- Opciones flotantes al hacer hover -->
+          <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center space-y-2">
+            <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Comprar</button>
+            <button class="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600">Ver reseñas</button>
+            <button class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">Libros similares</button>
+          </div>
+        </div>
+        
+        <!-- Información del libro -->
+        <div class="flex flex-col items-start">
+          <h3 class="text-xl font-semibold text-blue-800">Título del Libro 7</h3>
+          <p class="text-sm text-black">Autor 7</p>
+          <p class="text-sm font-bold text-black">13.20€</p>
+        </div>
+      </div> 
+      
+      <div class="flex items-start space-x-4">
+        <!-- Contenedor con opciones hover y detalles del libro -->
+        <div class="relative group w-[230px] h-[360px]">
+          <!-- Imagen del libro -->
+          <img src="img/books/book_8.avif" alt="Libro 8" class="w-full h-full object-cover rounded-lg transition-transform duration-300 group-hover:scale-105">
+          
+          <!-- Opciones flotantes al hacer hover -->
+          <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center space-y-2">
+            <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Comprar</button>
+            <button class="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600">Ver reseñas</button>
+            <button class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">Libros similares</button>
+          </div>
+        </div>
+        
+        <!-- Información del libro -->
+        <div class="flex flex-col items-start">
+          <h3 class="text-xl font-semibold text-blue-800">Título del Libro 8</h3>
+          <p class="text-sm text-black">Autor 8</p>
+          <p class="text-sm font-bold text-black">18.70€</p>
+        </div>
+      </div> 
+      
+      <div class="flex items-start space-x-4">
+        <!-- Contenedor con opciones hover y detalles del libro -->
+        <div class="relative group w-[230px] h-[360px]">
+          <!-- Imagen del libro -->
+          <img src="img/books/book_9.avif" alt="Libro 9" class="w-full h-full object-cover rounded-lg transition-transform duration-300 group-hover:scale-105">
+          
+          <!-- Opciones flotantes al hacer hover -->
+          <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center space-y-2">
+            <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Comprar</button>
+            <button class="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600">Ver reseñas</button>
+            <button class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">Libros similares</button>
+          </div>
+        </div>
+        
+        <!-- Información del libro -->
+        <div class="flex flex-col items-start">
+          <h3 class="text-xl font-semibold text-blue-800">Título del Libro 9</h3>
+          <p class="text-sm text-black">Autor 9</p>
+          <p class="text-sm font-bold text-black">21.55€</p>
+        </div>
+      </div> 
+    </div>
 
+  </div>    
+</div>
 
   <!-- Script del carrusel -->
   <script>
