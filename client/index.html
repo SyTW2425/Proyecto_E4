@@ -34,38 +34,57 @@
     </nav>
   </div>
   
-  <!-- BARRA IZQUIERDA -->
-  <div class="bg-emerald-600 w-64 h-screen fixed top-0 left-0 text-white flex flex-col justify-between">
+<!-- BARRA IZQUIERDA -->
+<div class="bg-emerald-600 w-64 h-screen fixed top-0 left-0 text-white flex flex-col justify-between">
 
-    <!-- Contenido superior -->
-    <div class="mt-8 p-16">
-      <h2 class="text-lg font-bold underline">Categorías</h2>
-      <ul class="mt-4 space-y-2">
-        <li><a href="#" class="hover:text-gray-400">Libros de autoayuda</a></li>
-        <li><a href="#" class="hover:text-gray-400">Libros infantiles</a></li>
-        <li><a href="#" class="hover:text-gray-400">Fantasía</a></li>
-        <li><a href="#" class="hover:text-gray-400">Historia</a></li>
-        <li><a href="#" class="hover:text-gray-400">Libros prácticos</a></li>
-        <li><a href="#" class="hover:text-gray-400">Literatura</a></li>
-        <li><a href="#" class="hover:text-gray-400">Novedades</a></li>
-      </ul>
-    </div>
-
-    <!-- Contenido inferior -->
-    <div class="p-4 flex justify-center">
-      <p class="text-sm">© 2024 Mi Web</p>
-    </div>
+  <!-- Contenido superior -->
+  <div class="mt-8 p-16">
+    <h2 class="text-lg font-bold underline">CATEGORÍAS</h2>
+    <ul class="mt-4 space-y-4"> <!-- Añadí más espacio entre las categorías -->
+      <li class="transition-transform ease-in-out duration-300 hover:translate-x-2">
+        <a href="#" class="block py-4 text-center w-full border-b border-transparent hover:border-white hover:bg-emerald-700 rounded-lg">Libros de autoayuda</a>
+      </li>
+      <li class="transition-transform ease-in-out duration-300 hover:translate-x-2">
+        <a href="#" class="block py-4 text-center w-full border-b border-transparent hover:border-white hover:bg-emerald-700 rounded-lg">Libros infantiles</a>
+      </li>
+      <li class="transition-transform ease-in-out duration-300 hover:translate-x-2">
+        <a href="#" class="block py-4 text-center w-full border-b border-transparent hover:border-white hover:bg-emerald-700 rounded-lg">Fantasía</a>
+      </li>
+      <li class="transition-transform ease-in-out duration-300 hover:translate-x-2">
+        <a href="#" class="block py-4 text-center w-full border-b border-transparent hover:border-white hover:bg-emerald-700 rounded-lg">Historia</a>
+      </li>
+      <li class="transition-transform ease-in-out duration-300 hover:translate-x-2">
+        <a href="#" class="block py-4 text-center w-full border-b border-transparent hover:border-white hover:bg-emerald-700 rounded-lg">Libros prácticos</a>
+      </li>
+      <li class="transition-transform ease-in-out duration-300 hover:translate-x-2">
+        <a href="#" class="block py-4 text-center w-full border-b border-transparent hover:border-white hover:bg-emerald-700 rounded-lg">Literatura</a>
+      </li>
+      <li class="transition-transform ease-in-out duration-300 hover:translate-x-2">
+        <a href="#" class="block py-4 text-center w-full border-b border-transparent hover:border-white hover:bg-emerald-700 rounded-lg">Novedades</a>
+      </li>
+    </ul>
   </div>
 
+  <!-- Contenido inferior -->
+  <div class="p-4 flex justify-center">
+    <p class="text-sm">© 2024 Mi Web</p>
+  </div>
+</div>
+
+
+
+
 <!-- PANTALLA CENTRAL -->
-<div class="ml-64 mt-32 px-8 flex flex-col items-center">
-  <div class="w-screen flex justify-center">
-    <video class="w-[1200px] h-[150px] rounded-lg" autoplay loop muted>
-      <source src="img/clip_library.mp4" type="video/mp4">
+<div class="ml-64 mt-[17vh] px-8 flex flex-col items-center">
+
+  <div class="absolute top-0 left-0 w-full h-[100vh] z-10">
+    <video class="w-full h-full object-cover" autoplay loop muted>
+      <source src="img/clip_cabecera_inicio.mp4" type="video/mp4">
     </video>
-  </div>  
+  </div>      
       
-  <div class="flex justify-center space-x-32 w-full mt-2">
+  <div class="flex justify-center space-x-32 w-full mt-[85vh]">
+
     
     <!-- Carrusel -->
     <div class="flex flex-col items-center space-y-4">
@@ -74,7 +93,7 @@
         <div class="relative group w-[230px] h-[360px]">
           <!-- Imagen del libro -->
           <img src="img/books/book_1.jpg" alt="Libro 1" class="w-full h-full object-cover rounded-lg transition-transform duration-300 group-hover:scale-105">
-      
+           
           <!-- Opciones flotantes al hacer hover -->
           <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center space-y-2">
             <!-- Botones con enlaces -->
@@ -279,31 +298,6 @@
 
   </div>    
 </div>
-
-  <!-- Script del carrusel -->
-  <script>
-    // Selecciona todos los carruseles
-    const carruseles = document.querySelectorAll('.relative');
-  
-    // Aplica la lógica de rotación a cada carrusel de forma independiente
-    carruseles.forEach(carrusel => {
-      const images = carrusel.querySelectorAll('img');
-      let currentIndex = 0;
-  
-      setInterval(() => {
-        // Oculta la imagen actual
-        images[currentIndex].classList.remove('opacity-100');
-        images[currentIndex].classList.add('opacity-0');
-  
-        // Cambia al siguiente índice (con vuelta al inicio)
-        currentIndex = (currentIndex + 1) % images.length;
-  
-        // Muestra la nueva imagen actual
-        images[currentIndex].classList.remove('opacity-0');
-        images[currentIndex].classList.add('opacity-100');
-      }, 3000); // Cambia cada 3 segundos
-    });
-  </script>
 
 </body>
 </html>
