@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Inicio de sesión</title>
+  <script src="https://cdn.tailwindcss.com"></script>
   <link href="dist/styles.css" rel="stylesheet">  
 
 </head>
@@ -18,23 +19,23 @@
 
   <!-- PANTALLA CENTRAL -->
   <div class="mt-32 px-8 flex flex-col items-center">
-    <h1 class="text-4xl font-bold text-gray-800 mb-8 underline">Inicio de sesión</h1>
+    <h1 class="text-2xl font-bold text-gray-800 underline">Inicio de sesión</h1>
     
     <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
-      <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+      <div class="sm:mx-auto sm:w-full sm:max-w-sm">
         <form class="space-y-6" action="#" method="POST">
           <div>
             <!-- Campo Email -->
             <input id="email" name="email" type="email" autocomplete="email" required
                    placeholder="Email address"
-                   class="block w-full rounded-lg border-0 py-3 px-4 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-lg">
+                   class="block w-full rounded-lg border-0 py-1 px-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-lg">
           </div>
     
           <div class="mt-4">
             <!-- Campo Password -->
             <input id="password" name="password" type="password" autocomplete="current-password" required
                    placeholder="Password"
-                   class="block w-full rounded-lg border-0 py-3 px-4 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-lg">
+                   class="block w-full rounded-lg border-0 py-1 px-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-lg">
           </div>
     
           <!-- Botón de Inicio de Sesión -->
