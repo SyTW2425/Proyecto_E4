@@ -7,7 +7,7 @@ router.get("/users", async (req, res) => {
   res.send("API is working!");
 });
 
-router.post('/users', createUser);  // Usamos el controlador para manejar la solicitud POST
+router.post('/register', createUser);  // Usamos el controlador para manejar la solicitud POST
 
 
 

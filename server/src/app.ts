@@ -16,8 +16,8 @@ mongoose.connect(process.env.MONGODB_URI as string)
   .then(() => console.log("Database connected successfully"))
   .catch((err) => console.error("Database connection error:", err));
 
-// Configuración de rutas sin prefijo '/api'
-app.use(userRoutes);
+// Configuración de rutas '/users/register'
+app.use('/users', userRoutes)
 app.use(listRoutes);
 
 

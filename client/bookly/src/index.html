@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <base href="/">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Inicio</title>
@@ -8,11 +9,13 @@
   <link href="dist/styles.css" rel="stylesheet">  
 
 </head>
+
 <body class="bg-emerald-50 font-sans">
+  <app-root></app-root>
   <!-- BARRA SUPERIOR -->
   <div class="bg-emerald-600 text-white py-4 px-6 flex justify-between items-center fixed top-0 left-0 w-full shadow-md z-50">
     <div class="flex items-center space-x-4">
-      <img src="img/logo.png" alt="Logo" class="h-10 w-10 rounded-full">
+      <img src="assets/img/logo.png" alt="Logo" class="h-10 w-10 rounded-full">
       <span class="text-xl font-semibold">Bookly</span>
     </div>
 
@@ -28,11 +31,11 @@
     
     <nav>
       <ul class="flex space-x-6">
-        <li><a href="#" class="hover:text-gray-400">Inicio</a></li>
-        <li><a href="sign_in.html" class="hover:text-gray-400">Login</a></li>
-        <li><a href="#" class="hover:text-gray-400">Contacto</a></li>
+        <li><a routerLink="/" class="hover:text-gray-400">Inicio</a></li>
+        <li><a routerLink="/sign-in" class="hover:text-gray-400">Login</a></li>
+        <li><a routerLink="/contact" class="hover:text-gray-400">Contacto</a></li>
       </ul>
-    </nav>
+    </nav>    
   </div>
   
 <!-- BARRA IZQUIERDA -->
