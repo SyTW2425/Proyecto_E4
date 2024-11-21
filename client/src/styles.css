@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.book-shape {
+  border-radius: 5px 5px 5px 5px; /* Bordes redondeados */
+}

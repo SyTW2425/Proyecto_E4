@@ -11,6 +11,7 @@ const app = express();
 app.use(express.json());
 
 // Conexión a MongoDB
+mongoose.set('strictQuery', true);
 mongoose.connect(process.env.MONGODB_URI as string)
   .then(() => console.log("Database connected successfully"))
   .catch((err) => console.error("Database connection error:", err));

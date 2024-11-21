@@ -22,10 +22,11 @@
     "express": "^4.18.2",
     "mongodb": "^5.4.0",
     "mongoose": "^6.7.0",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.3.3"
+    "ts-node": "^10.9.2"
   },
   "devDependencies": {
-    "@types/express": "^5.0.0"
+    "@types/express": "^5.0.0",
+    "@types/whatwg-url": "^8.2.2",
+    "typescript": "^5.6.3"
   }
 }
