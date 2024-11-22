@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { SignInComponent } from './components/sign-in/sign-in.component'; // Importa tu componente
+import { SignInComponent } from './pages/sign-in/sign-in.component'; // Importa tu componente
+import { AppComponent } from './app.component';
 
 const routes: Routes = [
-  // { path: '', component: HomeComponent }, // Componente de inicio
+  { path: '', component: AppComponent }, // Componente de inicio
   { path: 'sign-in', component: SignInComponent }, // Componente de login
   // { path: 'contact', component: ContactComponent }, // Componente de contacto (si existe)
 ];
