@@ -18,7 +18,13 @@ mongoose.connect(process.env.MONGODB_URI as string)
 
 // Configuración de rutas '/users/register'
 app.use('/users', userRoutes)
-app.use(listRoutes);
+//app.use(listRoutes);
+
+
+// Manejo de rutas no encontradas
+app.use((req: Request, res: Response) => {
+  res.status(404).json({ message: 'Ruta no encontrada' });
+});
 
 
 // Inicia el servidor en el puerto 3000
